@@ -1,0 +1,95 @@
+.container {
+  background: #f5f8fa;
+  display: flex;
+  justify-content: center;
+  min-height: 100dvh;
+}
+
+.inner {
+  padding: 0 12px;
+  width: min(100%, 480px);
+}
+
+.header {
+  display: grid;
+  gap: 18px;
+  padding: 36px 0;
+}
+
+.profileImageContainerWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.profileImageContainer {
+  border-radius: 50dvmax;
+  height: 120px;
+  overflow: hidden;
+  position: relative;
+  width: 120px;
+}
+
+.h1 {
+  font-size: 2.4rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.list {
+  display: grid;
+  gap: 18px;
+}
+
+.item {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.13);
+  overflow: hidden;
+}
+
+.link {
+  display: grid;
+  gap: 12px;
+  grid-template: 50px / 50px 1fr;
+  padding: 12px;
+}
+
+.iconImageContainer {
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 0.16);
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  width: 50px;
+}
+
+.twitcasting {
+  background: linear-gradient(
+    135deg,
+    rgb(8 146 253 / 1) 0%,
+    rgb(8 188 209 / 1) 75%,
+    rgb(8 230 159 / 1) 100%
+  );
+}
+
+.amazon {
+  padding: 6px;
+}
+
+.h2 {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.description {
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 3px;
+}
+
+.footer {
+  font-size: 1.2rem;
+  padding: 36px 0;
+  text-align: center;
+}
