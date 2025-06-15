@@ -17,7 +17,12 @@ export default function App(): React.JSX.Element {
               <Image alt="てり" quality={100} src={profile} />
             </div>
           </div>
-          <h1 className={styles.h1}>てり</h1>
+          <div className={styles.textsContainer}>
+            <h1 className={styles.h1}>てり</h1>
+            <div className={styles.profile}>
+              ハイパーメディアクリエイターです。
+            </div>
+          </div>
         </header>
         <ul className={styles.list}>
           <li className={styles.item}>
@@ -99,7 +104,7 @@ export default function App(): React.JSX.Element {
           <li className={styles.item}>
             <a
               className={styles.link}
-              href="https://www.amazon.co.jp"
+              href="https://www.amazon.co.jp/hz/wishlist/ls/35DAZ3JL3TEZZ"
               target="_blank"
             >
               <div className={clsx(styles.iconImageContainer, styles.amazon)}>

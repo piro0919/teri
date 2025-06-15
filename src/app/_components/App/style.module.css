@@ -1,8 +1,18 @@
 .container {
-  background: #f5f8fa;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   min-height: 100dvh;
+
+  @media screen and (orientation: portrait) {
+    background-image: url("/background-sp.png");
+  }
+
+  @media screen and (orientation: landscape) {
+    background-image: url("/background-pc.png");
+  }
 }
 
 .inner {
@@ -29,10 +39,21 @@
   width: 120px;
 }
 
+.textsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
 .h1 {
   font-size: 2.4rem;
   line-height: 1;
-  text-align: center;
+}
+
+.profile {
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 .list {
