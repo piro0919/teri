@@ -19,9 +19,7 @@ export default function App(): React.JSX.Element {
           </div>
           <div className={styles.textsContainer}>
             <h1 className={styles.h1}>てり</h1>
-            <div className={styles.profile}>
-              ハイパーメディアクリエイターです。
-            </div>
+            <p className={styles.profile}>なんにもできないアラサーです。</p>
           </div>
         </header>
         <ul className={styles.list}>
@@ -39,9 +37,7 @@ export default function App(): React.JSX.Element {
               />
               <div>
                 <h2 className={styles.h2}>X</h2>
-                <p className={styles.description}>
-                  たわいもないことを書いています。
-                </p>
+                <p className={styles.description}>つぶやき</p>
               </div>
             </a>
           </li>
@@ -58,9 +54,7 @@ export default function App(): React.JSX.Element {
               </div>
               <div>
                 <h2 className={styles.h2}>ツイキャス</h2>
-                <p className={styles.description}>
-                  気が向いたときに配信しています。
-                </p>
+                <p className={styles.description}>おしゃべり</p>
               </div>
             </a>
           </li>
@@ -78,9 +72,7 @@ export default function App(): React.JSX.Element {
               />
               <div>
                 <h2 className={styles.h2}>YouTube</h2>
-                <p className={styles.description}>
-                  七海りぃ名義でシチュエーションボイスを投稿しています。
-                </p>
+                <p className={styles.description}>七海りぃ</p>
               </div>
             </a>
           </li>
@@ -95,9 +87,7 @@ export default function App(): React.JSX.Element {
               </div>
               <div>
                 <h2 className={styles.h2}>note</h2>
-                <p className={styles.description}>
-                  たわいもないことを書いています。
-                </p>
+                <p className={styles.description}>考えていること</p>
               </div>
             </a>
           </li>
@@ -112,7 +102,7 @@ export default function App(): React.JSX.Element {
               </div>
               <div>
                 <h2 className={styles.h2}>Amazon ほしい物リスト</h2>
-                <p className={styles.description}>送ってくれると嬉しいです。</p>
+                <p className={styles.description}>生活</p>
               </div>
             </a>
           </li>
