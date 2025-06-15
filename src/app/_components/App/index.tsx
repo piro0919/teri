@@ -1,4 +1,6 @@
+"use client";
 import clsx from "clsx";
+import dayjs from "dayjs";
 import Image from "next/image";
 import { SocialIcon } from "react-social-icons";
 import amazon from "./_static/amazon.png";
@@ -7,7 +9,23 @@ import profile from "./_static/profile.jpg";
 import twitcasting from "./_static/twitcasting.png";
 import styles from "./style.module.css";
 
-export default function App(): React.JSX.Element {
+export type AppProps = {
+  latestNote: {
+    link: string;
+    pubDate: string;
+    title: string;
+  };
+  latestVideo: {
+    id: string;
+    published: string;
+    title: string;
+  };
+};
+
+export default function App({
+  latestNote,
+  latestVideo,
+}: AppProps): React.JSX.Element {
   return (
     <div className={styles.container}>
       <div className={styles.inner}>
@@ -24,27 +42,27 @@ export default function App(): React.JSX.Element {
         </header>
         <ul className={styles.list}>
           <li className={styles.item}>
-            <a
+            <div
               className={styles.link}
-              href="https://x.com/pypynanon"
-              target="_blank"
+              onClick={() => window.open("https://x.com/pypynanon", "_blank")}
             >
               <SocialIcon
+                as="div"
                 borderRadius="0"
                 className={styles.iconImageContainer}
-                target="_blank"
                 url="https://x.com/pypynanon"
               />
-              <div>
+              <div className={styles.detailContainer}>
                 <h2 className={styles.h2}>X</h2>
                 <p className={styles.description}>つぶやき</p>
               </div>
-            </a>
+            </div>
           </li>
           <li className={styles.item}>
             <a
               className={styles.link}
               href="https://twitcasting.tv/c:tytou"
+              rel="noopener noreferrer"
               target="_blank"
             >
               <div
@@ -52,7 +70,7 @@ export default function App(): React.JSX.Element {
               >
                 <Image alt="ツイキャス" quality={100} src={twitcasting} />
               </div>
-              <div>
+              <div className={styles.detailContainer}>
                 <h2 className={styles.h2}>ツイキャス</h2>
                 <p className={styles.description}>おしゃべり</p>
               </div>
@@ -60,47 +78,70 @@ export default function App(): React.JSX.Element {
           </li>
           <li className={styles.item}>
             <a
+              onClick={(e) => {
+                if (e.target instanceof HTMLAnchorElement) return;
+
+                window.open("https://www.youtube.com/@nanami_rii", "_blank");
+              }}
               className={styles.link}
-              href="https://www.youtube.com/@nanami_rii"
-              target="_blank"
             >
               <SocialIcon
+                as="div"
                 borderRadius="0"
                 className={styles.iconImageContainer}
-                target="_blank"
                 url="https://www.youtube.com/@nanami_rii"
               />
-              <div>
+              <div className={styles.detailContainer}>
                 <h2 className={styles.h2}>YouTube</h2>
                 <p className={styles.description}>七海りぃ</p>
+                <a
+                  className={styles.externalLink}
+                  href={`https://www.youtube.com/watch?v=${latestVideo.id.split(":")[2]}`}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {`${dayjs(latestVideo.published).format("YYYY.MM.DD")} ${latestVideo.title}`}
+                </a>
               </div>
             </a>
           </li>
           <li className={styles.item}>
-            <a
+            <div
+              onClick={(e) => {
+                if (e.target instanceof HTMLAnchorElement) return;
+
+                window.open("https://note.com/katy_amanda2525", "_blank");
+              }}
               className={styles.link}
-              href="https://note.com/katy_amanda2525"
-              target="_blank"
             >
               <div className={styles.iconImageContainer}>
                 <Image alt="note" quality={100} src={note} />
               </div>
-              <div>
+              <div className={styles.detailContainer}>
                 <h2 className={styles.h2}>note</h2>
                 <p className={styles.description}>考えていること</p>
+                <a
+                  className={styles.externalLink}
+                  href={latestNote.link}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {`${dayjs(latestNote.pubDate).format("YYYY.MM.DD")} ${latestNote.title}`}
+                </a>
               </div>
-            </a>
+            </div>
           </li>
           <li className={styles.item}>
             <a
               className={styles.link}
               href="https://www.amazon.co.jp/hz/wishlist/ls/35DAZ3JL3TEZZ"
+              rel="noopener noreferrer"
               target="_blank"
             >
               <div className={clsx(styles.iconImageContainer, styles.amazon)}>
                 <Image alt="Amazon" quality={100} src={amazon} />
               </div>
-              <div>
+              <div className={styles.detailContainer}>
                 <h2 className={styles.h2}>Amazon ほしい物リスト</h2>
                 <p className={styles.description}>生活</p>
               </div>

@@ -33,10 +33,10 @@
 
 .profileImageContainer {
   border-radius: 50dvmax;
-  height: 120px;
+  height: 96px;
   overflow: hidden;
   position: relative;
-  width: 120px;
+  width: 96px;
 }
 
 .textsContainer {
@@ -69,6 +69,7 @@
 }
 
 .link {
+  cursor: pointer;
   display: grid;
   gap: 12px;
   grid-template: 50px / 50px 1fr;
@@ -97,16 +98,30 @@
   padding: 6px;
 }
 
+.detailContainer {
+  overflow: hidden;
+}
+
 .h2 {
   font-size: 1.4rem;
   line-height: 1;
 }
 
-.description {
+.description,
+.externalLink {
   color: #666;
   font-size: 1.1rem;
   font-weight: 500;
-  margin-top: 3px;
+  line-height: 1;
+  margin-top: 6px;
+}
+
+.externalLink {
+  color: rgb(62 166 255);
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .footer {
