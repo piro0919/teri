@@ -8,8 +8,8 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  description: "てりのリンク集です。",
-  title: "てり リンク集",
+  description: "てりのリンク集",
+  title: "てり - te.link",
 };
 
 export default function RootLayout({

@@ -1,6 +1,7 @@
 "use client";
 import clsx from "clsx";
 import dayjs from "dayjs";
+import { Playwrite_AU_SA } from "next/font/google";
 import Image from "next/image";
 import { SocialIcon } from "react-social-icons";
 import amazon from "./_static/amazon.png";
@@ -8,6 +9,10 @@ import note from "./_static/note.png";
 import profile from "./_static/profile.jpg";
 import twitcasting from "./_static/twitcasting.png";
 import styles from "./style.module.css";
+
+const playwriteAUSA = Playwrite_AU_SA({
+  weight: "400",
+});
 
 export type AppProps = {
   latestNote: {
@@ -30,6 +35,9 @@ export default function App({
     <div className={styles.container}>
       <div className={styles.inner}>
         <header className={styles.header}>
+          <div className={clsx(styles.title, playwriteAUSA.className)}>
+            Te.Link
+          </div>
           <div className={styles.profileImageContainerWrapper}>
             <div className={styles.profileImageContainer}>
               <Image alt="てり" quality={100} src={profile} />
@@ -148,7 +156,7 @@ export default function App({
             </a>
           </li>
         </ul>
-        <footer className={styles.footer}>&copy; 2025 てり</footer>
+        <footer className={styles.footer}>&copy; 2025 te.link</footer>
       </div>
     </div>
   );
