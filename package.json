@@ -3,7 +3,7 @@
     "clsx": "2.1.1",
     "copy-to-clipboard": "3.3.3",
     "dayjs": "1.11.21",
-    "fast-xml-parser": "5.10.0",
+    "fast-xml-parser": "5.10.1",
     "next": "16.2.10",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
