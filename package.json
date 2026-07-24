@@ -4,9 +4,9 @@
     "copy-to-clipboard": "3.3.3",
     "dayjs": "1.11.21",
     "fast-xml-parser": "5.10.1",
-    "next": "16.2.10",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7",
+    "next": "16.2.11",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "react-social-icons": "6.26.0",
     "react-toastify": "11.1.0",
     "ress": "5.0.2"
